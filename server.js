@@ -6,13 +6,19 @@ const MongoClient = require('mongodb').MongoClient;
 
 let db;
 
+
+
+
+
+
+
 app.use(express.urlencoded({extended: true}))
 
 MongoClient.connect('mongodb+srv://gusdn5272:goqkfkrl9028@cluster0.wpjpn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',(error, client)=>{
     if (error) return console.log(error);
     db = client.db('checklist'); 
-    app.listen(8080, ()=>{
-      console.log('listening on 8080');
+    app.listen(5000, ()=>{
+      console.log('listening on 5000');
     });
   });
 
