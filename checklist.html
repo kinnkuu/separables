@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Check</title>
+    <style>
+          .sd{background-color: black;}
+          .mid{
+             position: absolute; 
+             left: 50%;
+             top: 50%; 
+             transform: translate(-50%, -50%);
+          }
+    </style>
+  </head>
+  <body>
+        <div class=mid>
+    <form action='/receive' method='POST'>
+                  사용자명
+                  <p></p>
+                        <input type="text" name='user'>
+                  <p></p>
+                  1.손씻기를 하루에 5번 이상 씻었나요?
+                  <p></p>
+                        <input type='radio' name='ck1' value="y">
+                        예
+                        <input type='radio' name='ck1' value="n">
+                        아니요
+                  <p></p>
+                  2.하루에 물을 1리터 이상 마셨나요?      
+                  <p></p>
+                        <input type='radio' name='ck2' value="y">
+                        예
+                        <input type='radio' name='ck2' value="n">
+                        아니요
+                  <p></p>
+                  3. 마스크를 올바르게 착용하셨나요?
+                  <p></p>
+                        <input type='radio' name='ck3' value="y">
+                        예
+                        <input type='radio' name='ck3' value="n">
+                        아니요
+                  <p></p>
+                  4. 실내에 있을때 수시로 환기를 하셨나요?
+                  <p></p>
+                        <input type='radio' name='ck4' value="y">
+                        예
+                        <input type='radio' name='ck4' value="n">
+                        아니요
+                  <p></p>
+                  5. 영양소를 골고루 갖춘 음식을 드셨나요?
+                  <p></p>
+                        <input type='radio' name='ck5' value="y">
+                        예
+                        <input type='radio' name='ck5' value="n">
+                        아니요
+                  <p></p>
+                  6. 날씨에 맞는 옷을 입으셨나요?
+                  <p></p>
+                        <input type='radio' name='ck6' value="y">
+                        예
+                        <input type='radio' name='ck6' value="n">
+                        아니요
+                  <p></p>
+                  <input type='submit'>
+      </form>
+        </div>
+  </body>
+</html>
