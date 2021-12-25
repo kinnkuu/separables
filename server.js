@@ -2,7 +2,6 @@ const express = require('express');
 const app = express(); 
 app.use(express.static('public'));
 app.use(express.static('index'));
-app.set("view engine", "pug");
 const MongoClient = require('mongodb').MongoClient;
 
 let db;
