@@ -41,7 +41,14 @@ app.post('/receive', (req, res)=>{
     console.log(req.body.ck5); 
     console.log(req.body.ck6);
     res.send("<script>alert('전송이 완료되었습니다.');location.href='/';</script>");
-    db.collection('post').insertOne({user : req.body.user, ck1 : req.body.ck1, ck2 : req.body.ck2, ck3 : req.body.ck3, ck4 : req.body.ck4, ck5 : req.body.ck5, ck6 : req.body.ck6,} , ()=>{
+    db.collection('post').insertOne({
+      '이름' : req.body.user, 
+      '물과 비누를 사용하여 20초 이상 손을 자주 씻었나요?' : req.body.ck1, 
+      '사람이 많은 장소 (식당, 헬스장, 영화관 등)에 방문 하신 적이 있나요?' : req.body.ck2, 
+      '마스크를 올바르게 착용하셨나요?' : req.body.ck3, 
+      '실내 장소에 방문 할 때 마다 출입자 명부를 잘 작성 하였나요?' : req.body.ck4, 
+      '타인과 1m이상 거리를 두고 있나요?' : req.body.ck5,
+      '매일 자신의 상태를 확인하고 있나요?' : req.body.ck6,} , ()=>{
         console.log('저장완료');
       });
   });
